@@ -36,7 +36,7 @@ http.createServer(
             fs.readFile('Files_data.txt',(err,data)=>{
                 if(!err){
                     var arr = data.toString().split(/\n/g)
-                    var latest_name = arr[arr.length - 1]
+                    var latest_name = arr[arr.length - 2]
                     fs.readFile(latest_name,(err,data)=>{
                         if(!err){
                             res.write(`The content is :\n\n\n <pre>${data.toString().replace(/\n/g,'<br>')} </pre><br><br> <button><a href='/'>return to home<a></button>`)

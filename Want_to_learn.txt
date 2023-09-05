@@ -1,2 +1,5 @@
 instanceof
 
+Node Js :   
+fs.open = method
+https://www.w3schools.com/nodejs/nodejs_uploadfiles.asp - file upload
