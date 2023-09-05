@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample HTML with CSS</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to File System</h1>
+    </header>
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+           Sample Site For 
+        </p>
+        <a href="#" class="button">Learn More</a>
+        <p>File Content :</p>
+        <textarea type="text" id="inp" required></textarea>
+        <p>File Name : </p>
+        <input type="text" id="filename" required/>
+        <button onclick="write_1()">button</button>
+        <p>Note : You can Read only latest updated file :-</p>
+        <button><a href="/read">Read File</a></button>
+        <input type="text" id="delete">
+        <button onclick="delete_fun()">delete</button>
+    </div>
+</body>
+<script>
+    function write_1(){
+        var inp = document.getElementById("inp");
+        var inp1 = document.getElementById("filename");
+        console.log(inp.value)
+        window.location.href = '/write?content='+inp.value+'&filename='+inp1.value
+    }
+    function delete_fun(){
+        var obj = document.getElementById('delete')
+        window.location.href = '/delete?filename='+obj.value
+    }
+</script>
+</html>

@@ -6,3 +6,6 @@ a = false ?? 20;
 
 b = 1>10 ? 10 : 2;
 //con - if val - else val   
+
+car = undefined;
+// Value is undefined, type is undefined

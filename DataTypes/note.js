@@ -17,3 +17,37 @@ The object data type can contain:
 3. A date
 
 */
+
+// Numbers:
+let length = 16;
+let weight = 7.5;
+
+// Strings:
+let color = "Yellow";
+let lastName = "Johnson";
+
+// Booleans
+let x = true;
+let y = false;
+
+// Object:
+const person = {firstName:"John", lastName:"Doe"};
+
+// Array object:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Date object:
+const date = new Date("2022-03-25");
+
+
+// JavaScript:
+let l = 16 + 4 + "Volvo";
+// Result:
+
+// out : 20Volvo
+
+// JavaScript:
+let j = "Volvo" + 16 + 4;
+// Result:
+
+// Volvo164
