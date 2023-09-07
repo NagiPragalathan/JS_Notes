@@ -12,5 +12,4 @@ function	Declares a function
 return	    Exits a function
 try	        Implements error handling to a block of statements
 
-
 */
