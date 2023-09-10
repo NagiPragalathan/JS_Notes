@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <h1>sample h1 tag</h1>
+    <p>sample paragraph tag</p>
+    <button class="btn">button</button>
+    <span>spanTag</span>
+    <div style="width: 50px; height: 50px;background-color:aqua;"><p>mouseout</p></div>
+    <input type="text" id="inp">
+    <h3>output</h3>
+</body>
+
+<script>
+    $(document).ready(()=>{
+        //        $('h1').css('color','red');
+        //        $('.btn')
+        //            .addClass("btn btn-primary")
+        //                .text("click me");
+        //        $("div").hide();
+        //        $(".btn").on("click",function(){
+            //             alert($(this));
+            //         });
+            //            $("#myDiv").show(5);
+            //            $('#myDiv2').slideUp()
+            //            let myVar = 7;
+            //            console.log($('.btn'));
+            //            var x = setInterval ( () => {console.log(x)}, 9 );
+            //            $.getJSON('/api', function(data) {});
+            //            setTimeout (()=>{$("#myDiv").fadeOut()}, 5000 )
+            $('.btn').click(
+                ()=>{
+                    alert("clicked")
+                }
+            )
+            $('span').dblclick(()=>{
+                alert(this+'dblClick')
+            })
+            $('div').mouseenter(function(){
+                // alert('sample')
+                $(this).text('mousein')
+            })
+            $('div').mouseleave(function(){
+                $(this).text('mouseout')
+            })
+
+            $('h1').hover(function(){
+                $(this).text('sample h2 tag')
+            })
+
+            $('h1').mouseout(function(){
+                $(this).text('sample h1 tag')
+            })
+            let output=""
+            $('#inp').on('change',function(){
+                output = $(this).val()
+                $('h3').text(output)
+            })
+    })
+
+</script>
+
+</html>
